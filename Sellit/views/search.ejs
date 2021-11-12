@@ -1,0 +1,39 @@
+<%- include("partials/navbar")%>
+
+
+
+<main>
+
+
+
+
+  <div class="container">
+
+    <div class="row text-center">
+    <%rows.forEach((row) => { %>
+        <%if (row.doc.type === search.name ) { %>
+          <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="<%=row.doc.image%>" alt="" >
+          <div class="caption">
+            <h4><%=row.doc.name%></h4>
+            <small class="text-muted"><%=row.doc.price%></small>
+          </div>
+          <p><a href="#" action="/cart" class ="btn btn-primary" method="post">add to cart</a></p>
+        </div>
+        </div>
+        <% }%>
+
+
+    <%});%>
+</div>
+</div>
+
+
+
+
+</main>
+
+
+
+<%- include("partials/footer")%>

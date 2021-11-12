@@ -1,0 +1,89 @@
+<%- include("partials/navbar")%>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  <body>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Personel Information</h1>
+
+      </div>
+<p style="text-transform: uppercase; font-size: 30px; text-align: left">Name: <%=currentUser.username%></p>
+<p style="text-transform: uppercase; font-size: 30px; text-align: left">E-mail: <%=currentUser.email%></p>
+<p style="text-transform: uppercase; font-size: 30px; text-align: left">Phone: <%=currentUser.phone%></p>
+
+      <h2 style="margin-top: 130px;">Your Displayed Items</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+              <%rows.forEach((row) => { %>
+                  <%if (row.doc.SellerEmail == currentUser.email) { %>
+                    <tr>
+                    <td><img style="height: 60px;" src="<%=row.doc.image%>" alt=""></td>
+                      <td><h4><%=row.doc.name%></h4></td>
+                      <td><%=row.doc.price%></td>
+                      <td><%=row.doc.category%></td>
+                      <td><%=row.doc.type%></td>
+                      </tr>
+                  <% }%>
+              <%});%>
+          </tbody>
+        </table>
+      </div>
+
+
+      <h2 style="margin-top: 130px;">Your Orders</h2>
+      <div style="margin-bottom: 130px;" class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+              <%rows.forEach((row) => { %>
+                  <%if (row.doc.BuyerEmail == currentUser.email) { %>
+                    <tr>
+                    <td><img style="height: 60px;" src="<%=row.doc.image%>" alt=""></td>
+                      <td><h4><%=row.doc.name%></h4></td>
+                      <td><%=row.doc.price%></td>
+                      <td><%=row.doc.category%></td>
+                      <td><%=row.doc.type%></td>
+                      </tr>
+                  <% }%>
+              <%});%>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+
+<%- include("partials/footer")%>

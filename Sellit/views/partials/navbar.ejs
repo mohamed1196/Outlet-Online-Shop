@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
+    <!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="/stylesheets/skel.css" />
+<link rel="stylesheet" href="/stylesheets/nicepage.css" media="screen">
+<link rel="stylesheet" href="/stylesheets/Page-1.css" media="screen">
+  <link href="/stylesheets/dashboard.css" rel="stylesheet">
+<script class="u-script" type="text/javascript" src="/stylesheets/nicepage.js" defer=""></script>
+<meta name="generator" content="Nicepage 3.3.3, nicepage.com">
+<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+<link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One:400">
+  </head>
+  <body>
+
+
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+
+        <link href="/stylesheets/main.css" rel="stylesheet">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="/qss.png" alt="description" height="38" width="50" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="/"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sell">Sell Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">products</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="/men">men</a></li>
+              <li><a class="dropdown-item" href="/women">women</a></li>
+              <li><a class="dropdown-item" href="/kids">kids</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form action="/search" method="post">
+          <input class="form-control" type="text" placeholder="enter item type" aria-label="Search" name="search">
+        </form>
+        <ul class="navbar-nav me-1 mb-2 mb-sm-0">
+          <% if(currentUser){ %>
+            <li class="nav-item"><a href="/profile">Signed In As <%=currentUser.username%></a></li>
+            <li class="nav-item"><a href="/logout">Log Out</a></li>
+          <% } else { %>
+            <li class="nav-item"><a class="nav-link" href="/signin"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+            <li class="nav-item"><a class="nav-link" href="/signup"><i class="fas fa-user-plus"></i>Sign Up</a></li>
+          <% } %>
+        </ul>
+        <ul class="navbar-nav me-0 mb-2 mb-sm-0">
+          <li class="nav-item"><a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>

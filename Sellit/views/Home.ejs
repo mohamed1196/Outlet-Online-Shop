@@ -1,0 +1,61 @@
+<%- include("partials/navbar")%>
+	<body id="top">
+
+
+			<section id="banner">
+				<div class="inner">
+					<h2>Sell IT</h2>
+					<p>Where you can buy or Sell used clothes</p>
+					<ul class="actions">
+						<li><a onClick="document.getElementById('one').scrollIntoView({behavior: 'smooth'});" class="button big special">BUY</a></li>
+						<li><a onClick="document.getElementById('two').scrollIntoView({behavior: 'smooth'});" class="button big alt">SELL</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="one" class="wrapper style1">
+				<header class="major">
+					<h2>Do YOU want to buy clothes?</h2>
+					<p>Choose Category</p>
+				</header>
+				<div class="container">
+					<div class="row">
+						<a href="/men" class="4u">
+							<section class="special box">
+								<i class="fas fa-male"></i>
+								<h3>MEN</h3>
+							</section>
+						</a>
+						<a href="/women" class="4u">
+							<section class="special box">
+								<i class="fas fa-female"></i>
+								<h3>Women</h3>
+							</section>
+						</a>
+						<a href="/kids" class="4u">
+							<section class="special box">
+								<i class="fas fa-child"></i>
+								<h3>Kids</h3>
+							</section>
+						</a>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style2">
+			<header class="major">
+				<h2>or do you want to sell your clothes?</h2>
+				<p>You can post the item of clothing you want to sell for thousends of people to see.<br>If a sale was made successfuly, we will ship your item to the Buyer</p>
+				<ul class="actions">
+					<li><a href="/sell" class="button big special">SELL NOW!</a></li>
+				</ul>
+			</header>
+			<div class="container">
+
+			</div>
+		</section>
+
+
+
+<%- include("partials/footer")%>

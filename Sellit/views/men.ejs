@@ -1,0 +1,41 @@
+<%- include("partials/navbar")%>
+
+
+<main>
+
+
+
+
+  <div class="container">
+
+    <div class="row text-center">
+    <%rows.forEach((row) => { %>
+        <%if (row.doc.category == "men") { %>
+          <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="<%=row.doc.image%>" alt="">
+          <div class="caption">
+            <h4><%=row.doc.name%></h4>
+            <small class="text-muted"><%=row.doc.price%></small>
+          </div>
+            <form action="/cart" method="post">
+              <input type="text" name="id" value="<%=row.doc._id%>" hidden>
+              <button type="submit" class="btn btn-primary" >add to cart</button>
+            </form>
+        </div>
+        </div>
+        <% }%>
+
+
+    <%});%>
+</div>
+</div>
+
+
+
+
+</main>
+
+
+
+<%- include("partials/footer")%>
